@@ -911,7 +911,8 @@ corresponding statement."
         (elpy-shell--with-maybe-echo
          (python-shell-send-string
           (python-shell-buffer-substring beg end)))))
-    (python-nav-forward-statement)))
+    (python-nav-forward-statement))
+  (end-of-line))
 
 (defun elpy-shell-send-top-statement-and-step ()
   "Send the current or next top-level statement to the Python shell and step.
